@@ -49,6 +49,7 @@ export default function RootLayout({
         {children}
         <ScrollToTop />
         <Footer />
+        <script src='https://www.noupe.com/embed/019f27da846070008f6a1ef1bdc4f91bb802.js'></script>
       </body>
     </html>
   );
