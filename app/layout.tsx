@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono, Raleway } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
@@ -15,6 +17,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 const raleway = Raleway({
   subsets: ["latin"],
   weight: ["400", "500", "700"],
@@ -24,6 +27,9 @@ const raleway = Raleway({
 export const metadata: Metadata = {
   title: "Triple Hash",
   description: "Innovate. Integrate. Elevate.",
+  other: {
+    "facebook-domain-verification": "cno5w9daoatrzcgo9md0hpuhip9hb5",
+  },
 };
 
 export default function RootLayout({
@@ -33,23 +39,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <script
-          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-          async
-          defer
-        ></script>
-        <meta name="facebook-domain-verification" content="cno5w9daoatrzcgo9md0hpuhip9hb5" />
-      </head>
       <body
-        className={`${geistSans.variable}${raleway.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${raleway.variable} ${geistMono.variable} antialiased`}
       >
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="afterInteractive"
+        />
+
         <ScrollBar />
         <Navbar />
         {children}
         <ScrollToTop />
         <Footer />
-        <script src='https://www.noupe.com/embed/019f27da846070008f6a1ef1bdc4f91bb802.js'></script>
+
+        <Script
+          src="https://www.noupe.com/embed/019f27da846070008f6a1ef1bdc4f91bb802.js"
+          strategy="lazyOnload"
+        />
       </body>
     </html>
   );
