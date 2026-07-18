@@ -27,7 +27,7 @@ const Team = () => {
     },
     {
       name: "Kunal Kumar",
-      title: " CTO & Developer",
+      title: " CTO & AI Engineer",
       handle: "kunal",
       contactText: "Contact Me",
       avatarUrl: "/team/kunal.png",
@@ -55,7 +55,7 @@ const Team = () => {
     },
     {
       name: "Gautam Kr. Pandit",
-      title: "Full Stack Developer",
+      title: "Software Engineer",
       handle: "gautam",
       contactText: "Connect Me",
       avatarUrl: "/team/gautam.png",
