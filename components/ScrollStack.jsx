@@ -40,21 +40,20 @@ export default function ScrollStack() {
               </div>
               <div className="w-full lg:w-1/2 p-2 sm:p-4 lg:pr-8 flex justify-center">
                 <img src="/service.jpeg" alt="Code Preview" className="
-                  w-full
-                  max-w-[480px]
-                  lg:max-w-none
-                  max-h-[260px]
-                  sm:max-h-[340px]
-                  lg:max-h-none
-                  object-contain
-                  p-[2px] rounded-[16px] 
-                  origin-center 
-                  lg:[transform:perspective(1000px)_rotateY(-20deg)]
-                  transition-transform duration-300 ease-in-out
-                  will-change-transform 
-                  [backface-visibility:hidden] 
-                  scale-100
-                " />
+                    w-full
+                    max-h-[260px]
+                    sm:max-h-[340px]
+                    lg:max-h-none
+                    object-cover
+                    lg:object-contain
+                    rounded-2xl
+                    origin-center 
+                    lg:[transform:perspective(1000px)_rotateY(-20deg)]
+                    transition-transform duration-300 ease-in-out
+                    will-change-transform 
+                    [backface-visibility:hidden] 
+                    scale-100
+                  " style={{ borderRadius: '16px' }} />
               </div>
             </div>
           </div>
