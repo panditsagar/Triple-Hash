@@ -3,46 +3,41 @@
 .wrapper {
   background-color: #0d0816;
   position: relative;
-  /* Add some padding-top to ensure content isn't directly at the top */
-  padding-top: 100px; /* Adjust as needed */
-  padding-bottom: 50px;
-  overflow-x: hidden;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; /* Changed to column to stack cards vertically */
+  padding-top: 40px;
+  padding-bottom: 160px;
 }
 
 .cards {
-  /* This container will now hold cards in a normal block flow */
-  position: relative;
-  /* Adjust padding or margin if needed to space out the cards container */
   max-width: 1360px;
+  margin: 0 auto;
   padding-right: 2rem;
-  padding-left: 2rem; /* Ensure it takes full width */
+  padding-left: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center cards horizontally within this container */
+  align-items: center;
+  position: relative;
 }
 
 .card {
-  height: 520px;
+  position: sticky;
   width: 100%;
-  margin-bottom: 20px; /* This will create vertical space between cards */
+  height: 520px;
+  margin-bottom: 80px; /* provides scroll distance for stacking */
   background-color: #1b1728;
   border-radius: 2rem;
   font-size: 36px;
-  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
 
-/* Rest of your existing CSS... */
+.card:last-child {
+  margin-bottom: 0;
+}
+
 .cardContent {
   display: flex;
   justify-content: center;
   height: 100%;
+  width: 100%;
 }
 
 .cardLeft {
@@ -51,6 +46,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 2rem;
+  overflow: hidden;
 }
 
 .cardImage {
@@ -84,6 +80,7 @@
   }
   .card {
     height: auto;
+    margin-bottom: 40px;
   }
 
   .cardContent {
@@ -106,7 +103,7 @@
   .cardRight {
     flex: unset;
     width: 100%;
-    padding: 2.9rem; /* remove heavy padding */
+    padding: 2rem;
   }
 
   .cardHeading {
@@ -125,18 +122,13 @@
     padding-right: 1rem;
   }
   .wrapper {
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 60px;
   }
 
   .card {
     border-radius: 1rem;
-  }
-
-  .cardContent {
-    height: 100%;
-    display: flex;
-    flex-direction: column !important;
+    margin-bottom: 30px;
   }
 
   .cardLeft {
@@ -144,7 +136,7 @@
     margin-bottom: 1rem;
   }
   .cardRight {
-    padding: 2.9rem;
+    padding: 1.5rem;
   }
 
   .cardHeading {
@@ -155,9 +147,5 @@
   .cardDescription {
     font-size: 0.9rem;
     line-height: 1.4;
-  }
-  .cardImage {
-    width: 100%;
-    height: 100%;
   }
 }
