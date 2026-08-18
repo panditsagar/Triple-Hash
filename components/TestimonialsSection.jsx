@@ -1,7 +1,7 @@
 // src/components/TestimonialsSection.jsx
 'use client'; // If you're using Next.js App Router
 
-import React, { useState, useRef } from 'react';
+import React from 'react';
 
 import './TestimonialsSection.css'; // Import the CSS file for animation
 
@@ -183,38 +183,26 @@ const TestimonialCard = ({ quote, author, handle, avatarSrc, bgColor }) => {
 
 
 const TestimonialsSection = () => {
-  const [isPaused, setIsPaused] = useState(false);
-  const scrollContainerRef = useRef(null);
-
   // Duplicate testimonials multiple times to create a seamless infinite loop effect.
-  // We'll duplicate it 3 times to ensure enough content for smooth animation.
   const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   return (
     <section className="bg-[#0D0816] pb-20 overflow-hidden relative">
-      {/* Background glow/particles (as seen in your original image) */}
       <div className='max-w-[1360px] mx-auto px-4 lg:px-8'>
-
-
         {/* Scrolling Testimonials Container */}
-        <div
-          className="overflow-hidden relative  " // pb-10 gives space for potential shadow on cards
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          <div className="absolute inset-0 z-0"
-          >
+        <div className="overflow-hidden relative testimonials-container py-2">
+          {/* Left & Right Gradient Blend Overlays into Section Background */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-[#0D0816] via-[#0D0816]/80 to-transparent pointer-events-none z-20" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-[#0D0816] via-[#0D0816]/80 to-transparent pointer-events-none z-20" />
+
+          <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-transparent stars-background" />
           </div>
 
-          <div
-            ref={scrollContainerRef}
-            // Apply 'paused' class if isPaused is true, else 'scrolling'
-            className={`flex w-max will-change-transform ${isPaused ? 'paused' : 'scrolling'}`}
-          >
+          <div className="testimonials-track">
             {duplicatedTestimonials.map((testimonial, index) => (
               <TestimonialCard
-                key={index} // Use index as key here because data is duplicated
+                key={index}
                 quote={testimonial.quote}
                 author={testimonial.author}
                 handle={testimonial.handle}
