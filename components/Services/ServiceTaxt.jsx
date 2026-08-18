@@ -71,7 +71,7 @@ const ScrollLines = () => {
         </h2>
 
         {/* gradient lines */}
-        <p className="line w-full sm:w-[50%] text-center" style={gradientText}>
+        <p className="line w-full sm:w-[50%] text-center mb-8 sm:mb-12 md:mb-16" style={gradientText}>
           End-to-End Solutions That Build,
 
           Automate & Scale Your Business

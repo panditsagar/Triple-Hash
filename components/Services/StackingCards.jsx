@@ -52,53 +52,48 @@ export default function StackingCards() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.cards}>
-        {cardsData.map((card, index) => {
-          // Dynamic offset so each card sticks cleanly one over another
-          const topOffset = 80 + index * 24;
-
-          return (
+        {cardsData.map((card, index) => (
+          <div
+            key={card.id}
+            className={styles.card}
+            style={{
+              '--index': index,
+              zIndex: index + 1,
+              border: '1px solid hsla(0, 0%, 100%, .16)',
+              boxShadow: 'inset 0 1px #ff8e5d66, 0 20px 40px rgba(0, 0, 0, 0.7)',
+            }}
+          >
             <div
-              key={card.id}
-              className={styles.card}
-              style={{
-                top: `${topOffset}px`,
-                zIndex: index + 1,
-                border: '1px solid hsla(0, 0%, 100%, .16)',
-                boxShadow: 'inset 0 1px #ff8e5d66, 0 20px 40px rgba(0, 0, 0, 0.7)',
-              }}
+              className={styles.cardContent}
+              style={{ flexDirection: card.reverse ? "row-reverse" : "row" }}
             >
               <div
-                className={styles.cardContent}
-                style={{ flexDirection: card.reverse ? "row-reverse" : "row" }}
+                className={styles.cardLeft}
+                style={{
+                  backgroundImage: `radial-gradient(circle at 30% 140%, rgba(75,153,217,.33), transparent 37%), 
+                                    radial-gradient(circle at 50% 310%, #0400ff26, #a2a68700 78%), 
+                                    linear-gradient(transparent, #0a16195e), 
+                                    radial-gradient(circle at 50% -30%, #a85c5c33, #ff131300), 
+                                    radial-gradient(90% 10% at 50% 0, #a85c5c0d, #67454500 90%)`,
+                }}
               >
-                <div
-                  className={styles.cardLeft}
+                <img src={card.img} alt={card.heading} className={styles.cardImage} />
+              </div>
+              <div className={styles.cardRight}>
+                <h3
                   style={{
-                    backgroundImage: `radial-gradient(circle at 30% 140%, rgba(75,153,217,.33), transparent 37%), 
-                                      radial-gradient(circle at 50% 310%, #0400ff26, #a2a68700 78%), 
-                                      linear-gradient(transparent, #0a16195e), 
-                                      radial-gradient(circle at 50% -30%, #a85c5c33, #ff131300), 
-                                      radial-gradient(90% 10% at 50% 0, #a85c5c0d, #67454500 90%)`,
+                    backgroundImage: 'linear-gradient(to right, #ff9b26, #ee4f27)',
+                    WebkitBackgroundClip: 'text',
                   }}
+                  className={`bg-clip-text text-transparent subheadline ${styles.cardHeading}`}
                 >
-                  <img src={card.img} alt={card.heading} className={styles.cardImage} />
-                </div>
-                <div className={styles.cardRight}>
-                  <h3
-                    style={{
-                      backgroundImage: 'linear-gradient(to right, #ff9b26, #ee4f27)',
-                      WebkitBackgroundClip: 'text',
-                    }}
-                    className={`bg-clip-text text-transparent subheadline ${styles.cardHeading}`}
-                  >
-                    {card.heading}
-                  </h3>
-                  <p className={`description ${styles.cardDescription}`}>{card.description}</p>
-                </div>
+                  {card.heading}
+                </h3>
+                <p className={`description ${styles.cardDescription}`}>{card.description}</p>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </div>
     </div>
   );

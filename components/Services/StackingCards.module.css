@@ -4,7 +4,7 @@
   background-color: #0d0816;
   position: relative;
   padding-top: 40px;
-  padding-bottom: 160px;
+  padding-bottom: 100px; /* Clean, tight bottom spacing removing large blank space */
 }
 
 .cards {
@@ -20,17 +20,14 @@
 
 .card {
   position: sticky;
+  top: calc(80px + var(--index, 0) * 24px);
   width: 100%;
   height: 520px;
-  margin-bottom: 80px; /* provides scroll distance for stacking */
+  margin-bottom: 60px; /* Provides smooth scroll runway for each card */
   background-color: #1b1728;
   border-radius: 2rem;
   font-size: 36px;
   overflow: hidden;
-}
-
-.card:last-child {
-  margin-bottom: 0;
 }
 
 .cardContent {
@@ -74,13 +71,20 @@
 
 /* Tablet (≤991px) */
 @media (max-width: 991px) {
-  .cards {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .wrapper {
+    padding-bottom: 60px;
   }
+
+  .cards {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .card {
+    top: calc(70px + var(--index, 0) * 16px);
     height: auto;
-    margin-bottom: 40px;
+    min-height: auto;
+    margin-bottom: 35px;
   }
 
   .cardContent {
@@ -92,7 +96,8 @@
   .cardLeft {
     flex: unset;
     width: 100%;
-    margin-bottom: 1.5rem;
+    height: 260px;
+    margin-bottom: 1rem;
   }
 
   .cardImage {
@@ -103,7 +108,7 @@
   .cardRight {
     flex: unset;
     width: 100%;
-    padding: 2rem;
+    padding: 2rem 1.5rem;
   }
 
   .cardHeading {
@@ -117,35 +122,41 @@
 
 /* Mobile (≤600px) */
 @media (max-width: 600px) {
+  .wrapper {
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
   .cards {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  .wrapper {
-    padding-top: 20px;
-    padding-bottom: 60px;
-  }
 
   .card {
-    border-radius: 1rem;
-    margin-bottom: 30px;
+    top: calc(60px + var(--index, 0) * 12px);
+    height: auto;
+    min-height: auto;
+    border-radius: 1.25rem;
+    margin-bottom: 24px;
   }
 
   .cardLeft {
-    height: 200px;
-    margin-bottom: 1rem;
+    height: 190px;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
   }
+
   .cardRight {
-    padding: 1.5rem;
+    padding: 1.25rem 1rem 1.5rem 1rem;
   }
 
   .cardHeading {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.35rem;
+    margin-bottom: 0.4rem;
   }
 
   .cardDescription {
-    font-size: 0.9rem;
-    line-height: 1.4;
+    font-size: 0.88rem;
+    line-height: 1.45;
   }
 }
