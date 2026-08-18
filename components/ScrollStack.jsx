@@ -1,28 +1,25 @@
 'use client';
+import React from 'react';
 import { MdCheck } from 'react-icons/md';
-import { motion } from 'framer-motion';
 import styles from './ScrollStackPureCSS.module.css';
 import { FaCode } from "react-icons/fa";
 
-export default function StackingCards() {
-  // simple alternating fade/slide
-  const cardVariants = (direction) => ({
-    hidden: { opacity: 0, x: direction === 'left' ? -120 : 120 },
-    visible: { opacity: 1, x: 0 },
-  });
-
+export default function ScrollStack() {
   return (
     <div className={styles.wrapper}>
+      {/* Ambient Gradient Glow between IntegrationsSection and ScrollStack */}
+      <div
+        className="pointer-events-none absolute top-0 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-[700px] h-[350px] rounded-full opacity-60 blur-[110px] z-0"
+        style={{
+          background: "radial-gradient(circle, #7877C6 0%, #5159d9 35%, transparent 55%)",
+        }}
+      />
+
       <div className={styles.container}>
         <div className={styles.cards}>
           {/* card 1 */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={cardVariants('right')}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ amount: 0.3 }}
-            className="mb-[50px] w-full rounded-2xl shadow-xl border border-gray-700 [background:radial-gradient(circle_at_top_left,rgba(0,200,255,0.4),transparent_10%),radial-gradient(circle_at_top_right,rgba(0,200,255,0.4),transparent_10%),radial-gradient(circle_at_bottom_left,rgba(0,200,255,0.4),transparent_2%),radial-gradient(circle_at_bottom_right,rgba(0,200,255,0.4),transparent_10%),#FFF9EF]"
+          <div
+            className={`${styles.card1} rounded-2xl shadow-2xl border border-gray-700 [background:radial-gradient(circle_at_top_left,rgba(0,200,255,0.4),transparent_10%),radial-gradient(circle_at_top_right,rgba(0,200,255,0.4),transparent_10%),radial-gradient(circle_at_bottom_left,rgba(0,200,255,0.4),transparent_2%),radial-gradient(circle_at_bottom_right,rgba(0,200,255,0.4),transparent_10%),#FFF9EF]`}
           >
             <div className="flex flex-col-reverse lg:flex-row items-center w-full h-full gap-5 lg:gap-20 p-4 lg:p-14">
               <div className="w-full lg:w-2/3 flex flex-col gap-6 lg:gap-8 p-4 lg:p-8">
@@ -31,13 +28,14 @@ export default function StackingCards() {
                     Apps? Nah.   We Build Business Engines.
                   </h2>
                   <p className="lg:w-[100%] text-gray-800 description">
-                    Every feature we design is tied to your business goals — not just technical specs. Our team blends entrepreneurial insight with technical expertise, so what you get isn’t just a product… it’s a system that helps you grow. </p>
+                    Every feature we design is tied to your business goals — not just technical specs. Our team blends entrepreneurial insight with technical expertise, so what you get isn’t just a product… it’s a system that helps you grow.
+                  </p>
                 </div>
                 <div className="flex flex-col gap-6">
                   <p className="flex gap-2 description"> <strong>We follow a simple, proven framework to bring your vision to life:</strong></p>
-                  <p className="flex gap-2 description"><span className="text-gray-700  "><FaCode className="w-6 h-6" /></span><strong>Plan: </strong> Understand your goals, market, and users.</p>
-                  <p className="flex gap-2 description"><span className="text-gray-700  "><FaCode className="w-6 h-6" /></span><strong>Build: </strong> Develop fast, scalable products with AI at the core.</p>
-                  <p className="flex gap-2 description"><span className="text-gray-700  "><FaCode className="w-6 h-6" /> </span><strong>Scale: </strong> Optimize funnels, automate workflows, and grow with you.</p>
+                  <p className="flex gap-2 description"><span className="text-gray-700"><FaCode className="w-6 h-6" /></span><strong>Plan: </strong> Understand your goals, market, and users.</p>
+                  <p className="flex gap-2 description"><span className="text-gray-700"><FaCode className="w-6 h-6" /></span><strong>Build: </strong> Develop fast, scalable products with AI at the core.</p>
+                  <p className="flex gap-2 description"><span className="text-gray-700"><FaCode className="w-6 h-6" /> </span><strong>Scale: </strong> Optimize funnels, automate workflows, and grow with you.</p>
                 </div>
               </div>
               <div className="w-full lg:w-1/2 p-4 lg:pr-8">
@@ -53,17 +51,12 @@ export default function StackingCards() {
                 " />
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* card 2 */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            variants={cardVariants('left')}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
-            viewport={{ amount: 0.3 }}
+          <div
             style={{ border: '1px solid hsla(0, 0%, 100%, .16)' }}
-            className="relative w-full rounded-2xl shadow-xl bg-[#0e0918]"
+            className={`${styles.card2} rounded-2xl shadow-2xl bg-[#0e0918]`}
           >
             <div className="flex flex-col-reverse lg:flex-row-reverse items-center w-full h-full gap-10 lg:gap-20 p-4 py-8 lg:p-14 lg:py-20">
               <div className="w-full lg:w-1/2 flex flex-col gap-6 lg:gap-8 p-0 lg:p-8">
@@ -78,25 +71,22 @@ export default function StackingCards() {
                 <div className="description text-[#C4BBD3] flex flex-wrap gap-4">
                   <div className="flex gap-4 flex-wrap lg:flex-nowrap">
                     <div className="flex gap-2 w-full lg:w-[45%]">
-                       < MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
-                      <p><strong className="text-white description"> Launch quickly</strong>  on scalable foundations
-                        w</p>
+                       <MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
+                      <p><strong className="text-white description"> Launch quickly</strong> on scalable foundations</p>
                     </div>
                     <div className="flex justify-start gap-2 w-full lg:w-[45%]">
-                     < MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
-                      <p><strong className="text-white description">Test live </strong>  wwith real users & pivot fast
-                      </p>
+                     <MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
+                      <p><strong className="text-white description">Test live </strong> with real users & pivot fast</p>
                     </div>
                   </div>
                   <div className="flex gap-4 flex-wrap lg:flex-nowrap">
                     <div className="flex gap-2 w-full lg:w-[45%]">
-                       < MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
+                       <MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
                       <p><strong className="text-white description">Improve continuously, </strong> not in one-off cycles </p>
                     </div>
                     <div className="flex gap-2 w-full lg:w-[45%]">
-                      < MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
-                      <p><strong className="text-white description">Scale confidently </strong> with data-driven decisions
-                      </p>
+                      <MdCheck className='w-6 h-6 sm:w-8 sm:h-8' />
+                      <p><strong className="text-white description">Scale confidently </strong> with data-driven decisions</p>
                     </div>
                   </div>
                 </div>
@@ -115,7 +105,7 @@ export default function StackingCards() {
                 " />
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>

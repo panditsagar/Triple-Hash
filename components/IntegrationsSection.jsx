@@ -142,7 +142,7 @@ const IntegrationsSection = () => {
    <section className="relative w-full bg-[#0D0816] py-10 sm:py-0 overflow-visible">
       <div className=" hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-11/12 rotate-[24deg] aspect-[1/2.2] w-[80%] max-w-[400px] bg-[linear-gradient(#a13355,#5159d9)] rounded-[800%] opacity-45 blur-[128px] z-[0]" />
       <div
-        className="hidden sm:block absolute bottom-[-10%] left-[20%] w-[80%] max-w-[400px] aspect-square rounded-full opacity-50 blur-[120px] z-0"
+        className="hidden sm:block absolute bottom-[-10%] left-[20%] w-[80%] max-w-[00px] aspect-square rounded-full opacity-50 blur-[120px] z-0"
         style={{
           background: "radial-gradient(circle, #7877C6 -38%, #7877C6 0%)",
         }}
