@@ -11,7 +11,7 @@ export default function ScrollStack() {
       <div
         className="pointer-events-none absolute top-0 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[85%] max-w-[700px] h-[350px] rounded-full opacity-60 blur-[110px] z-0"
         style={{
-          background: "radial-gradient(circle, #7877C6 0%, #5159d9 35%, transparent 55%)",
+          background: "radial-gradient(circle, #7877C6 0%, #5159d9 35%, transparent 5%)",
         }}
       />
 
