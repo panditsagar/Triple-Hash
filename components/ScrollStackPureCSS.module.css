@@ -2,7 +2,7 @@
   width: 100%;
   background-color: #0d0816;
   padding-top: 4rem;
-  padding-bottom: 5rem;
+  padding-bottom: 1.5rem;
   position: relative;
 }
 
@@ -38,25 +38,33 @@
   position: sticky;
   top: 110px;
   z-index: 2;
-  margin-bottom: 40px;
+  margin-bottom: 40;
   width: 100%;
 }
 
 @media screen and (max-width: 991px) {
+  .wrapper {
+    padding-top: 3.5rem;
+    padding-bottom: 1.25rem;
+  }
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
   .card1 {
     top: 70px;
     margin-bottom: 40px;
   }
   .card2 {
     top: 95px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
   }
 }
 
 @media screen and (max-width: 767px) {
   .wrapper {
-    padding-top: 2.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
   }
 
   .container {
@@ -65,12 +73,15 @@
   }
 
   .card1 {
-    top: 60px;
-    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+    margin-bottom: 24px;
   }
 
   .card2 {
-    top: 80px;
-    margin-bottom: 20px;
+    position: relative;
+    top: 0;
+    margin-bottom: 0;
   }
 }
+
