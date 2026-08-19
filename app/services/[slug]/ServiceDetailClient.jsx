@@ -51,8 +51,7 @@ export default function ServiceDetailClient({ service, allServices }) {
         }}
       />
 
-      {/* Navigation */}
-      <NavBar />
+   
 
       {/* Hero Section */}
       <section className="w-full max-w-[1360px] mx-auto px-4 lg:px-8 pt-32 pb-16 relative z-10">
@@ -122,23 +121,7 @@ export default function ServiceDetailClient({ service, allServices }) {
             </div>
           </div>
         </div>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-16 pt-12 border-t border-white/10">
-          {service.stats?.map((stat, idx) => (
-            <div
-              key={idx}
-              className="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-md"
-            >
-              <p className="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white to-[#C4BBD3] font-geomanist">
-                {stat.value}
-              </p>
-              <p className="text-sm text-gray-400 font-medium mt-1">
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
+ 
       </section>
 
       {/* Bottom CTA */}
