@@ -97,7 +97,7 @@ export default function ServicesHero() {
                             <img
                                 src="/serviceshero.png"
                                 alt="Effortel Services"
-                                className="scale-100 sm:scale-105 md:scale-115 lg:scale-130 xl:scale-145 transform transition-transform duration-500 drop-shadow-[0_25px_60px_rgba(0,0,0,0.85)] z-10 relative"
+                                className="relative w-full h-auto object-contain scale-115 lg:scale-130 xl:scale-145 transform transition-transform duration-500 drop-shadow-[0_25px_60px_rgba(0,0,0,0.85)] z-10"
                             />
                         </div>
                     </div>
