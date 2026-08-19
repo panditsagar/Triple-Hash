@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { HiArrowRight } from 'react-icons/hi';
 import ScrollReveal from './Gsap/ScrollReveal';
@@ -99,13 +100,15 @@ export default function ServiceSection() {
                   <div className="w-full flex items-start justify-between gap-6 relative">
                     {/* Left Content Area: Title + Description */}
                     <div className="flex flex-col max-w-xl sm:max-w-2xl lg:max-w-3xl pr-6">
-                      <h3
-                        className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight font-geomanist transition-colors duration-300 ${
-                          isActive ? 'font-bold text-white' : 'font-normal text-white/50 group-hover:text-white'
-                        }`}
-                      >
-                        {service.title}
-                      </h3>
+                      <Link href={`/services/${service.id}`} className="inline-block">
+                        <h3
+                          className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl tracking-tight font-geomanist transition-colors duration-300 ${
+                            isActive ? 'font-bold text-white' : 'font-normal text-white/50 group-hover:text-white'
+                          }`}
+                        >
+                          {service.title}
+                        </h3>
+                      </Link>
 
                       {/* Smooth CSS Grid Expand & Collapse Transition */}
                       <div
@@ -123,15 +126,17 @@ export default function ServiceSection() {
 
                     {/* Far Right End: Circular Arrow Icon */}
                     <div className="shrink-0 z-30 pt-1">
-                      <div
-                        className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
-                          isActive
-                            ? 'border-white/50 text-white bg-white/10 shadow-lg'
-                            : 'border-white/20 text-white/60 group-hover:border-white/50 group-hover:text-white group-hover:bg-white/5'
-                        }`}
-                      >
-                        <HiArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
-                      </div>
+                      <Link href={`/services/${service.id}`} aria-label={`View ${service.title} service details`}>
+                        <div
+                          className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full border flex items-center justify-center transition-all duration-300 ${
+                            isActive
+                              ? 'border-white/50 text-white bg-white/10 shadow-lg'
+                              : 'border-white/20 text-white/60 group-hover:border-white/50 group-hover:text-white group-hover:bg-white/5'
+                          }`}
+                        >
+                          <HiArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />
+                        </div>
+                      </Link>
                     </div>
                   </div>
                 </div>
