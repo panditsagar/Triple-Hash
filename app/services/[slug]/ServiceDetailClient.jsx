@@ -1,24 +1,14 @@
 "use client";
 
 import React, { useLayoutEffect, useRef } from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  HiArrowLeft,
-  HiArrowRight,
-  HiCheckCircle,
-  HiSparkles,
-  HiCode,
-  HiLightningBolt,
-} from "react-icons/hi";
+ 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import styles from "../../../components/Services/Hero.module.css";
-import ScrollReveal from "../../../components/Gsap/ScrollReveal";
-import SpotlightCard from "../../../components/ReactBit/SpotlightCard";
+
 import CallToAction from "../../../components/CallToAction";
 import NavBar from "../../../components/NavBar";
-import Footer from "../../../components/Footer";
+
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
@@ -151,137 +141,9 @@ export default function ServiceDetailClient({ service, allServices }) {
         </div>
       </section>
 
-      {/* Overview Section */}
-      <section className="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-16 relative z-10">
-        <div className="bg-gradient-to-br from-white/5 via-white/[0.02] to-transparent border border-white/10 rounded-3xl p-8 sm:p-12 backdrop-blur-xl">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white font-geomanist mb-4">
-            Overview
-          </h2>
-          <p className="text-lg text-[#C4BBD3] leading-relaxed max-w-4xl">
-            {service.overview}
-          </p>
-        </div>
-      </section>
-
-      {/* Key Features Grid */}
-      <section className="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-16 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white font-geomanist mb-3">
-            Key Capabilities
-          </h2>
-          <p className="text-[#C4BBD3] text-base max-w-2xl mx-auto">
-            What makes our {service.title} service standout in performance and
-            results.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {service.features?.map((feature, idx) => (
-            <SpotlightCard
-              key={idx}
-              className="custom-spotlight-card h-full"
-              spotlightColor="radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(107, 33, 239, 0.3), rgba(7, 122, 199, 0.15) 60%, transparent 80%)"
-            >
-              <div className="p-8 rounded-3xl border border-white/10 bg-white/5 h-full flex flex-col justify-between">
-                <div>
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#077AC7]/20 to-[#6B21EF]/20 border border-white/10 flex items-center justify-center text-[#10B981] mb-6">
-                    <HiSparkles className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white font-geomanist mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-[#C4BBD3] text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            </SpotlightCard>
-          ))}
-        </div>
-      </section>
-
-      {/* Process Workflow Section */}
-      <section className="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-16 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white font-geomanist mb-3">
-            Our Process
-          </h2>
-          <p className="text-[#C4BBD3] text-base max-w-2xl mx-auto">
-            A proven 4-step execution model engineered for predictability and
-            speed.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {service.process?.map((proc, idx) => (
-            <div
-              key={idx}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 relative"
-            >
-              <span className="text-3xl font-extrabold text-[#077AC7] opacity-60 font-mono mb-4 block">
-                {proc.step}
-              </span>
-              <h4 className="text-lg font-bold text-white mb-2 font-geomanist">
-                {proc.title}
-              </h4>
-              <p className="text-xs text-[#C4BBD3] leading-relaxed">
-                {proc.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Tech Stack & Deliverables */}
-      <section className="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-16 relative z-10">
-        <div className="bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div>
-            <h3 className="text-2xl font-bold text-white font-geomanist mb-2">
-              Tools & Technologies We Use
-            </h3>
-            <p className="text-sm text-[#C4BBD3] max-w-xl">
-              We leverage modern enterprise frameworks and industry-standard
-              tools to build robust solutions.
-            </p>
-          </div>
-          <div className="flex flex-wrap gap-2.5 max-w-md justify-start md:justify-end">
-            {service.techStack?.map((tech, idx) => (
-              <span
-                key={idx}
-                className="bg-white/10 border border-white/15 text-white px-4 py-2 rounded-xl text-xs font-semibold font-mono"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Other Services Navigation */}
-      <section className="w-full max-w-[1360px] mx-auto px-4 lg:px-8 py-16 relative z-10 border-t border-white/10">
-        <h3 className="text-xl font-bold text-white font-geomanist mb-6">
-          Explore Other Services
-        </h3>
-        <div className="flex flex-wrap gap-3">
-          {allServices
-            ?.filter((s) => s.id !== service.id)
-            .map((otherService) => (
-              <Link
-                key={otherService.id}
-                href={`/services/${otherService.slug}`}
-                className="bg-white/5 border border-white/10 hover:border-white/30 text-white/80 hover:text-white px-5 py-2.5 rounded-xl text-xs font-medium transition-all duration-300 flex items-center gap-2 group"
-              >
-                <span>{otherService.title}</span>
-                <HiArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            ))}
-        </div>
-      </section>
-
       {/* Bottom CTA */}
       <CallToAction />
-
-      
+      <TestimonialsSection />
     </main>
   );
 }
