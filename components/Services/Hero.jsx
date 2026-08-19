@@ -52,7 +52,7 @@ export default function ServicesHero() {
         <section className={`${styles.section} relative overflow-hidden`}>
             {/* Red Radial Gradient Centered on Screen */}
             <div
-                className="absolute top-[-2%] left-1/2 -translate-x-1/2 w-[900px] h-[750px] pointer-events-none rounded-full blur-[150px] opacity-80 z-0"
+                className="absolute top-[-2%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] pointer-events-none rounded-full blur-[150px] opacity-80 z-0"
                 style={{
                     background: 'radial-gradient(circle, rgba(238, 79, 39, 0.45) 0%, rgba(220, 38, 38, 0.32) 35%, rgba(139, 53, 107, 0.22) 60%, transparent 80%)',
                 }}
