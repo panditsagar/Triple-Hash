@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import HeroText from "@/components/HeroText";
 import NavBar from "@/components/NavBar";
 import SecondSection from "@/components/SecondSection";
@@ -7,10 +6,10 @@ import Logos from "@/components/Logos";
 import IntegrationsSection from "@/components/IntegrationsSection";
 import ScrollStack from "@/components/ScrollStack";
 import CaseStudy from "@/components/CaseStudy";
+import ServiceSection from "@/components/ServiceSection";
 import EnterpriseSection from "@/components/EnterpriseSection";
-import Automation from "@/components/Automation"; // Ensure this path is correct
+import Automation from "@/components/Automation";
 import Lightning from "@/components/ReactBit/Lightning";
-import Footer from "@/components/Footer";
 import TestimonialsSection from "@/components/TestimonialsSection";
 
 
@@ -40,6 +39,7 @@ export default function Home() {
       <IntegrationsSection />
       <ScrollStack />
       <CaseStudy />
+      <ServiceSection />
       <EnterpriseSection />
       <Automation />
       <TestimonialsSection/>
