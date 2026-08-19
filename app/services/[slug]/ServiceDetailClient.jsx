@@ -123,7 +123,7 @@ export default function ServiceDetailClient({ service, allServices }) {
       </section>
 
       {/* Feature Cards & Client Quote Banner Section */}
-      <section className="w-full  pb-20  relative overflow-hidden font-raleway">
+      <section className="w-full  pb-24  relative overflow-hidden font-raleway">
         <div className="w-full max-w-[1360px] mx-auto px-4 lg:px-8 relative z-10">
           {/* Top 3 Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -276,7 +276,7 @@ export default function ServiceDetailClient({ service, allServices }) {
       </section>
 
       {/* Performance & Measurable Results Section */}
-      <section className="w-full pb-20 relative overflow-hidden">
+      <section className="w-full pb-24 relative overflow-hidden">
         <div className="w-full max-w-[1360px] mx-auto px-4 lg:px-8 relative z-10">
           <div className="flex gap-6 xl:gap-8 justify-between items-center">
             {/* Left Column: Globe Image */}
@@ -339,6 +339,231 @@ export default function ServiceDetailClient({ service, allServices }) {
                     </p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3-Step Strategic B2B Growth Roadmap Section */}
+      <section className="w-full   pb-24   relative overflow-hidden ">
+        <div className="w-full max-w-[1360px] mx-auto px-4 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            {/* Left Column: Heading, Description & CTA */}
+            <div className="lg:col-span-5 flex flex-col items-start">
+              <h2
+                style={{
+                  backgroundImage: `linear-gradient(180deg, #ffffff1a, #0003 58%), linear-gradient(140deg, #fff, #7c65a1)`,
+                  WebkitBackgroundClip: "text",
+                }}
+                className="headline bg-clip-text text-transparent text-3xl sm:text-4xl lg:text-[2.6rem] font-bold leading-tight mb-6"
+              >
+                Our 3-step approach to strategic B2B growth
+              </h2>
+
+              <p className="description text-[#C4BBD3] text-base lg:text-lg leading-relaxed mb-8 max-w-lg">
+                Our streamlined 3-step approach ensures your business gets a
+                focused strategy, practical solutions, and measurable outcomes.
+              </p>
+
+              <button
+                onClick={() =>
+                  window.open("https://hashboard.in/book/web", "_blank")
+                }
+                className="cursor-pointer buttonfont border border-[#FFFFFF63] bg-gradient-to-r from-[#FF8C00] to-[#FF0C00] text-white px-6 py-3 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300"
+              >
+                Explore our services
+              </button>
+            </div>
+
+            {/* Right Column: Stepped Growth Curve Area Chart & Milestone Cards */}
+            <div className="lg:col-span-7 w-full pt-8 lg:pt-0">
+              <div className="relative w-full max-w-[680px] mx-auto h-[380px] sm:h-[420px] lg:h-[450px] flex flex-col justify-end">
+                {/* SVG Growth Chart with Highlighted Step 1 Region & Dashed Pin Lines */}
+                <svg
+                  className="absolute bottom-0 left-0 w-full h-full pointer-events-none z-0"
+                  viewBox="0 0 700 360"
+                  preserveAspectRatio="none"
+                >
+                  <defs>
+                    {/* Step 1 Highlighted Area Fill Gradient (Brand Orange/Gold Glow) */}
+                    <linearGradient
+                      id="step1HighlightGradient"
+                      x1="0"
+                      y1="1"
+                      x2="1"
+                      y2="0"
+                    >
+                      <stop
+                        offset="0%"
+                        stopColor="#FF8C00"
+                        stopOpacity="0.12"
+                      />
+                      <stop
+                        offset="60%"
+                        stopColor="#FF9B26"
+                        stopOpacity="0.45"
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#FFD166"
+                        stopOpacity="0.75"
+                      />
+                    </linearGradient>
+
+                    {/* Main Growth Area Fill Gradient (Brand Dark Purple/Orange Glow) */}
+                    <linearGradient
+                      id="mainGrowthAreaGradient"
+                      x1="0"
+                      y1="0"
+                      x2="1"
+                      y2="0"
+                    >
+                      <stop offset="0%" stopColor="#1E142B" stopOpacity="0.8" />
+                      <stop
+                        offset="50%"
+                        stopColor="#6B21EF"
+                        stopOpacity="0.25"
+                      />
+                      <stop
+                        offset="100%"
+                        stopColor="#FF8C00"
+                        stopOpacity="0.3"
+                      />
+                    </linearGradient>
+                  </defs>
+
+                  {/* 1. Step 1 Highlighted Triangle Base (0 to 220) */}
+                  <path
+                    d="M 0 340 Q 110 325, 220 295 L 220 340 Z"
+                    fill="url(#step1HighlightGradient)"
+                  />
+
+                  {/* 2. Main Area under curve (220 to 700) */}
+                  <path
+                    d="M 220 295 Q 460 220, 700 140 L 700 340 L 220 340 Z"
+                    fill="url(#mainGrowthAreaGradient)"
+                  />
+
+                  {/* 3. Glowing Top Curve Stroke */}
+                  <path
+                    d="M 0 340 Q 300 300, 700 140"
+                    fill="none"
+                    stroke="url(#curveStrokeGradient)"
+                    strokeWidth="3.5"
+                  />
+
+                  {/* 4. Vertical Dashed Pin Lines dropping from Right Edge of each Card */}
+                  <line
+                    x1="220"
+                    y1="196"
+                    x2="220"
+                    y2="340"
+                    stroke="#FFFFFF1A"
+                    strokeDasharray="4 4"
+                    strokeWidth="1"
+                  />
+                  <line
+                    x1="462"
+                    y1="124"
+                    x2="462"
+                    y2="340"
+                    stroke="#FFFFFF1A"
+                    strokeDasharray="4 4"
+                    strokeWidth="1"
+                  />
+                  <line
+                    x1="700"
+                    y1="52"
+                    x2="700"
+                    y2="340"
+                    stroke="#FFFFFF1A"
+                    strokeDasharray="4 4"
+                    strokeWidth="1.5"
+                  />
+                </svg>
+
+                {/* Cards overlay positioned relative to percentage coordinates */}
+                <div className="relative z-10 w-full h-full">
+                  {/* Step 1 Card (Right edge aligns with 31.4% / 220px) */}
+                  <div className="absolute left-[31.4%] top-[40%] -translate-x-full">
+                    <div className="rounded-t-xl px-4 py-3 flex items-center gap-3 border border-white/10 min-w-[170px]">
+                      {/* Flower Icon */}
+                      <div className="w-8 h-8 rounded-lg   flex items-center justify-center text-[#cbd5e1] shrink-0 shadow-md">
+                        <svg
+                          className="w-8 h-8"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.2"
+                        >
+                          <ellipse cx="12" cy="7" rx="3" ry="5" />
+                          <ellipse cx="12" cy="17" rx="3" ry="5" />
+                          <ellipse cx="7" cy="12" rx="5" ry="3" />
+                          <ellipse cx="17" cy="12" rx="5" ry="3" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col text-left">
+                        <span className="  text-white font-bold text-md   leading-tight">
+                          Understand
+                        </span>
+                        <span className="  text-white font-bold text-md  leading-tight">
+                          your business
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step 2 Card (Right edge aligns with 64.2% / 450px) */}
+                  <div className="absolute left-[66%] top-[20%] -translate-x-full">
+                    <div className="rounded-t-xl px-4 py-3 flex items-center gap-3  border border-white/10 min-w-[170px]">
+                      {/* Pinwheel Icon */}
+                      <div className="w-8 h-8 rounded-lg   flex items-center justify-center text-[#cbd5e1] shrink-0 shadow-md">
+                        <svg
+                          className="w-8 h-8"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                        >
+                          <path d="M12 2C12 7.5 7.5 12 2 12C7.5 12 12 16.5 12 22C12 16.5 16.5 12 22 12C16.5 12 12 7.5 12 2Z" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col text-left">
+                        <span className="  text-white font-bold text-md leading-tight">
+                          Build the right
+                        </span>
+                        <span className="  text-white font-bold text-md  leading-tight">
+                          strategy
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Step 3 Card (Right edge aligns with 95.7% / 670px) */}
+                  <div className="absolute left-[100%] top-[0%] -translate-x-full">
+                    <div className="rounded-t-xl px-4 py-3 flex items-center gap-3 border border-white/10 min-w-[180px]">
+                      {/* Starburst Icon */}
+                      <div className="w-8 h-8 rounded-lg  flex items-center justify-center text-[#cbd5e1] shrink-0 shadow-md">
+                        <svg
+                          className="w-8 h-8"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.2"
+                        >
+                          <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07L19.07 4.93" />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col text-left">
+                        <span className="  text-white font-bold text-md   leading-tight">
+                          Execute &
+                        </span>
+                        <span className="  text-white font-bold text-md   leading-tight">
+                          deliver results
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
