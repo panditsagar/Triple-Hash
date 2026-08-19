@@ -92,6 +92,11 @@
     width: 100%;
     height: 260px; /* smaller height for mobile */
   }
+    .imageWrapper {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+  }
   .subtitle {
     font-size: 1.2rem;
   }

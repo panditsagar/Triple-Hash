@@ -52,7 +52,7 @@ export default function ServicesHero() {
         <section className={`${styles.section} relative overflow-hidden`}>
             {/* Red Radial Gradient Centered on Screen */}
             <div
-                className="absolute top-[-2%] left-1/2 -translate-x-1/2 w-[900px] h-[550px] pointer-events-none rounded-full blur-[150px] opacity-80 z-0"
+                className="absolute top-[-2%] left-1/2 -translate-x-1/2 w-full max-w-[900px] h-[350px] sm:h-[450px] md:h-[550px] pointer-events-none rounded-full blur-[100px] sm:blur-[150px] opacity-80 z-0"
                 style={{
                     background: 'radial-gradient(circle, rgba(238, 79, 39, 0.45) 0%, rgba(220, 38, 38, 0.32) 35%, rgba(139, 53, 107, 0.22) 60%, transparent 80%)',
                 }}
@@ -89,7 +89,7 @@ export default function ServicesHero() {
                         <div className={`${styles.imageWrapper} relative group max-w-[800px] lg:translate-x-16 xl:translate-x-28 lg:-translate-y-12 xl:-translate-y-20`} ref={imageRef}>
                             {/* Light Red Radial Gradient Displayed Above & Over the Image */}
                             <div
-                                className="absolute -top-24 left-1/2 -translate-x-1/2 w-[750px] h-[600px] rounded-full blur-[140px] opacity-50 pointer-events-none z-20 mix-blend-screen"
+                                className="absolute -top-12 sm:-top-24 left-1/2 -translate-x-1/2 w-full max-w-[750px] h-[300px] sm:h-[450px] md:h-[600px] rounded-full blur-[100px] sm:blur-[140px] opacity-50 pointer-events-none z-20 mix-blend-screen"
                                 style={{
                                     background: 'radial-gradient(circle at 50% 30%, rgba(255, 99, 71, 0.28) 0%, rgba(239, 68, 68, 0.16) 40%, rgba(139, 53, 107, 0.08) 70%, transparent 85%)',
                                 }}
@@ -97,7 +97,7 @@ export default function ServicesHero() {
                             <img
                                 src="/serviceshero.png"
                                 alt="Effortel Services"
-                                className="scale-115 lg:scale-130 xl:scale-145 transform transition-transform duration-500 drop-shadow-[0_25px_60px_rgba(0,0,0,0.85)] z-10 relative"
+                                className="scale-100 sm:scale-105 md:scale-115 lg:scale-130 xl:scale-145 transform transition-transform duration-500 drop-shadow-[0_25px_60px_rgba(0,0,0,0.85)] z-10 relative"
                             />
                         </div>
                     </div>
