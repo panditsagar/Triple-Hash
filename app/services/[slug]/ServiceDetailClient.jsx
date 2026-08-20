@@ -367,20 +367,20 @@ export default function ServiceDetailClient({ service, allServices }) {
       {/* Performance & Measurable Results Section */}
       <section className="w-full pb-24 relative overflow-hidden">
         <div className="w-full max-w-[1360px] mx-auto px-4 lg:px-8 relative z-10">
-          <div className="flex gap-6 xl:gap-8 justify-between items-center">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-6 xl:gap-8 justify-between items-center">
             {/* Left Column: Globe Image */}
-            <div className="lg:col-span-6 flex items-center justify-center relative">
-              <div className="relative z-10 w-full max-w-[500px] h-auto p-4 flex items-center justify-center">
+            <div className="lg:col-span-6 w-full lg:w-auto flex items-center justify-center relative">
+              <div className="relative z-10 w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[500px] h-auto p-4 flex items-center justify-center">
                 <img
                   src={performanceImage}
                   alt="Globe performance graphic"
-                  className="w-full h-auto object-contain max-h-[480px] invert-50"
+                  className="w-full h-auto object-contain max-h-[320px] sm:max-h-[380px] lg:max-h-[480px] invert-50"
                 />
               </div>
             </div>
 
             {/* Right Column: Title, Description & Stat Items */}
-            <div className="lg:col-span-6 flex flex-col justify-center">
+            <div className="lg:col-span-6 w-full lg:w-auto flex flex-col justify-center">
               {/* Section Title */}
               <h2
                 style={{
@@ -453,7 +453,7 @@ export default function ServiceDetailClient({ service, allServices }) {
 
             {/* Right Column: Stepped Growth Curve Area Chart & Milestone Cards */}
             <div className="lg:col-span-7 w-full pt-8 lg:pt-0">
-              <div className="relative w-full max-w-[680px] mx-auto h-[380px] sm:h-[420px] lg:h-[450px] flex flex-col justify-end">
+              <div className="relative w-full max-w-[680px] mx-auto h-[320px] sm:h-[420px] lg:h-[450px] flex flex-col justify-end">
                 {/* SVG Growth Chart with Highlighted Step 1 Region & Dashed Pin Lines */}
                 <svg
                   className="absolute bottom-0 left-0 w-full h-full pointer-events-none z-0"
@@ -562,16 +562,16 @@ export default function ServiceDetailClient({ service, allServices }) {
                 <div className="relative z-10 w-full h-full">
                   {/* Step 1 Card */}
                   {roadmapSteps[0] && (
-                    <div className="absolute left-[31.4%] top-[40%] -translate-x-full">
-                      <div className="rounded-t-xl px-4 py-3 flex items-center gap-3 border border-white/10 min-w-[170px]">
-                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-[#cbd5e1] shrink-0 shadow-md">
+                    <div className="absolute left-0 top-[48%] lg:left-[31.4%] lg:top-[40%] lg:-translate-x-full">
+                      <div className="rounded-t-xl px-3 lg:px-4 py-3 flex items-center gap-2 lg:gap-3 border border-white/10 min-w-[138px] sm:min-w-[158px] lg:min-w-[170px]">
+                        <div className="w-7 h-7 lg:w-8 lg:h-8 rounded-lg flex items-center justify-center text-[#cbd5e1] shrink-0 shadow-md">
                           {renderStepIcon(roadmapSteps[0].icon)}
                         </div>
                         <div className="flex flex-col text-left">
-                          <span className="text-white font-bold text-md leading-tight">
+                          <span className="text-white font-bold text-sm lg:text-md leading-tight">
                             {roadmapSteps[0].line1}
                           </span>
-                          <span className="text-white font-bold text-md leading-tight">
+                          <span className="text-white font-bold text-sm lg:text-md leading-tight">
                             {roadmapSteps[0].line2}
                           </span>
                         </div>
@@ -581,16 +581,16 @@ export default function ServiceDetailClient({ service, allServices }) {
 
                   {/* Step 2 Card */}
                   {roadmapSteps[1] && (
-                    <div className="absolute left-[66%] top-[20%] -translate-x-full">
-                      <div className="rounded-t-xl px-4 py-3 flex items-center gap-3 border border-white/10 min-w-[170px]">
-                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-[#cbd5e1] shrink-0 shadow-md">
+                    <div className="absolute left-1/2 top-[24%] -translate-x-1/2 lg:left-[66%] lg:top-[20%] lg:-translate-x-full">
+                      <div className="rounded-t-xl px-3 lg:px-4 py-3 flex items-center gap-2 lg:gap-3 border border-white/10 min-w-[138px] sm:min-w-[158px] lg:min-w-[170px]">
+                        <div className="w-7 h-7 lg:w-8 lg:h-8 rounded-lg flex items-center justify-center text-[#cbd5e1] shrink-0 shadow-md">
                           {renderStepIcon(roadmapSteps[1].icon)}
                         </div>
                         <div className="flex flex-col text-left">
-                          <span className="text-white font-bold text-md leading-tight">
+                          <span className="text-white font-bold text-sm lg:text-md leading-tight">
                             {roadmapSteps[1].line1}
                           </span>
-                          <span className="text-white font-bold text-md leading-tight">
+                          <span className="text-white font-bold text-sm lg:text-md leading-tight">
                             {roadmapSteps[1].line2}
                           </span>
                         </div>
@@ -600,16 +600,16 @@ export default function ServiceDetailClient({ service, allServices }) {
 
                   {/* Step 3 Card */}
                   {roadmapSteps[2] && (
-                    <div className="absolute left-[100%] top-[0%] -translate-x-full">
-                      <div className="rounded-t-xl px-4 py-3 flex items-center gap-3 border border-white/10 min-w-[180px]">
-                        <div className="w-8 h-8 rounded-lg flex items-center justify-center text-[#cbd5e1] shrink-0 shadow-md">
+                    <div className="absolute right-0 top-[0%] lg:left-[100%] lg:right-auto lg:-translate-x-full">
+                      <div className="rounded-t-xl px-3 lg:px-4 py-3 flex items-center gap-2 lg:gap-3 border border-white/10 min-w-[138px] sm:min-w-[158px] lg:min-w-[180px]">
+                        <div className="w-7 h-7 lg:w-8 lg:h-8 rounded-lg flex items-center justify-center text-[#cbd5e1] shrink-0 shadow-md">
                           {renderStepIcon(roadmapSteps[2].icon)}
                         </div>
                         <div className="flex flex-col text-left">
-                          <span className="text-white font-bold text-md leading-tight">
+                          <span className="text-white font-bold text-sm lg:text-md leading-tight">
                             {roadmapSteps[2].line1}
                           </span>
-                          <span className="text-white font-bold text-md leading-tight">
+                          <span className="text-white font-bold text-sm lg:text-md leading-tight">
                             {roadmapSteps[2].line2}
                           </span>
                         </div>
