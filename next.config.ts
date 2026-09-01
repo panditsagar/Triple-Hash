@@ -12,6 +12,15 @@ const nextConfig = {
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+
+  async rewrites() {
+    return [
+      {
+        source: '/landing-page/:path*',
+        destination: 'https://lp.triplehash.in/:path*',
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;
