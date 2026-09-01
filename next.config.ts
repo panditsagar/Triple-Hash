@@ -13,14 +13,30 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
-  async rewrites() {
-    return [
-      {
-        source: '/landing-page/:path*',
-        destination: 'https://lp.triplehash.in/:path*',
-      },
-    ];
-  },
+ async rewrites() {
+  return [
+    {
+      source: '/landing-page/:path*',
+      destination: 'https://lp.triplehash.in/:path*',
+    },
+    {
+      source: '/work/:path*',
+      destination: 'https://lp.triplehash.in/work/:path*',
+    },
+    {
+      source: '/coach/:path*',
+      destination: 'https://lp.triplehash.in/coach/:path*',
+    },
+    {
+      source: '/image/:path*',
+      destination: 'https://lp.triplehash.in/image/:path*',
+    },
+    {
+      source: '/public/:path*',
+      destination: 'https://lp.triplehash.in/public/:path*',
+    },
+  ];
+},
 };
 
 module.exports = nextConfig;
