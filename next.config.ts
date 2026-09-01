@@ -20,6 +20,14 @@ const nextConfig = {
       destination: 'https://lp.triplehash.in/:path*',
     },
     {
+      source: '/style.css',
+      destination: 'https://lp.triplehash.in/style.css',
+    },
+    {
+      source: '/script.js',
+      destination: 'https://lp.triplehash.in/script.js',
+    },
+    {
       source: '/work/:path*',
       destination: 'https://lp.triplehash.in/work/:path*',
     },
@@ -32,8 +40,8 @@ const nextConfig = {
       destination: 'https://lp.triplehash.in/image/:path*',
     },
     {
-      source: '/public/:path*',
-      destination: 'https://lp.triplehash.in/public/:path*',
+      source: '/font/:path*',
+      destination: 'https://lp.triplehash.in/font/:path*',
     },
   ];
 },
