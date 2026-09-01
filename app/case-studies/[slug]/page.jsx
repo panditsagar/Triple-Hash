@@ -74,9 +74,17 @@ const renderBlock = (block, i) => {
   }
 };
 
+// --- Generate Static Params ---
+export async function generateStaticParams() {
+  return caseStudiesData.map((article) => ({
+    slug: article.slug,
+  }));
+}
+
 // --- Next.js Metadata for SEO ---
 export async function generateMetadata({ params }) {
-  const article = caseStudiesData.find((a) => a.slug === params.slug);
+  const { slug } = await params;
+  const article = caseStudiesData.find((a) => a.slug === slug);
 
   if (!article) {
     return {

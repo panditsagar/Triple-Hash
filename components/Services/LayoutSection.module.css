@@ -458,7 +458,7 @@
 @media (max-width: 991px) {
   .layoutSection {
     width: 100%;
-    padding-top: 100px;
+    
   }
 
   .title {
@@ -525,9 +525,7 @@
 
 /* Mobile (≤600px) */
 @media (max-width: 600px) {
-  .layoutSection {
-    padding-top: 100px;
-  }
+  
   .subTitle {
     font-size: 2.2rem;
     line-height: 1.1;

@@ -1,47 +1,87 @@
 .wrapper {
   width: 100%;
-  background-color: #0d0816; /* bg-[#0D0816] */
-  padding-top: 5rem; /* pt-20 */
-  overflow: hidden;
+  background-color: #0d0816;
+  padding-top: 4rem;
+  padding-bottom: 1.5rem;
+  position: relative;
 }
 
 .container {
   width: 100%;
-  max-width: 1360px; /* max-w-[1360px] */
-  margin-left: auto; /* mx-auto */
+  max-width: 1360px;
+  margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem; /* px-4 */
+  padding-left: 2rem;
   padding-right: 2rem;
   display: flex;
-  flex-direction: column; /* flex-col */
-  justify-content: space-between;
-  gap: 3rem;
+  flex-direction: column;
+  position: relative;
 }
 
-.container2 {
-  margin-top: 40px;
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
   width: 100%;
-  height: 600px;
 }
 
-.tilt-img {
-  border: 3px solid black;
-  padding: 2px;
-  border-radius: 16px;
-  transform-origin: center;
-  transform: perspective(1000px) rotateY(-20deg);
-  transition: transform 300ms ease;
-  will-change: transform;
-  backface-visibility: hidden;
-  scale: 1;
+.card1 {
+  position: sticky;
+  top: 80px;
+  z-index: 1;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.card2 {
+  position: sticky;
+  top: 110px;
+  z-index: 2;
+  margin-bottom: 40;
+  width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .wrapper {
+    padding-top: 3.5rem;
+    padding-bottom: 1.25rem;
+  }
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .card1 {
+    top: 70px;
+    margin-bottom: 40px;
+  }
+  .card2 {
+    top: 95px;
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
-  
+  .wrapper {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
 
   .container {
-    padding-left: 1rem; /* px-4 */
+    padding-left: 1rem;
     padding-right: 1rem;
   }
- 
+
+  .card1 {
+    position: relative;
+    top: 0;
+    margin-bottom: 24px;
+  }
+
+  .card2 {
+    position: relative;
+    top: 0;
+    margin-bottom: 0;
+  }
 }
+

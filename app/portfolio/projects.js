@@ -154,4 +154,112 @@ export const projects = [
       "Enhanced student engagement and learning outcomes, increased platform adoption, and received positive feedback from users appreciating the personalized approach to education.",
     link: "https://malinda.ai/",
   },
+  {
+    id: 8,
+    title: "Estira",
+    description:
+      "Estira is an AI-powered personal styling app that turns your own wardrobe into an on-demand stylist. Users chat with an AI to get outfit ideas, virtually try on looks before buying, and get weather- and itinerary-aware outfit plans for trips. The app blends a personal wardrobe catalog, AI-driven outfit generation, and a curated shop so users can complete looks with pieces they don't already own.",
+    image: "/work/work8.png",
+    category: "AI-Powered Personal Styling App",
+    clientName: "Confidential",
+    profession: "Fashion Tech Founder",
+    technologies: [
+      "React Native",
+      "Expo",
+      "Firebase",
+      "Razorpay",
+      "RevenueCat",
+      "AI Integration",
+    ],
+    challenge:
+      "Building a stylist experience that feels genuinely personal — combining a user's own wardrobe, AI-generated outfit recommendations, and realistic virtual try-on — while keeping the mobile app fast and reliable across trip planning, chat, shopping, and payments in one cohesive flow.",
+    solution:
+      "Built a React Native/Expo app with an AI chat stylist that recommends outfits from the user's wardrobe, a virtual try-on experience, and trip-aware outfit planning based on weather and itinerary. Integrated Firebase for auth and data, Razorpay for payments, and RevenueCat for subscriptions to support a complete shop-to-checkout journey.",
+    impact:
+      "Delivered a cohesive AI styling experience spanning wardrobe management, chat-based recommendations, virtual try-on, and trip planning — giving users a personal stylist in their pocket and a direct path to shop for what they're missing.",
+    link: "https://beta.estira.in/",
+  },
+  {
+    id: 9,
+    title: "HashBoard",
+    description:
+      "HashBoard is a multi-tenant business operations platform that brings project management, team collaboration, attendance, payroll, CRM, billing, client portals, scheduling, and AI assistance into one connected workspace. Companies can manage their internal teams and client work while automating meetings, subscriptions, documents, and everyday operational workflows.",
+    image: "/work/work9.png",
+    category: "AI-Powered Business Operations Platform",
+    clientName: "TripleHash",
+    profession: "SaaS & Business Operations",
+    technologies: [
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "Prisma",
+      "Firebase",
+      "Cloudflare R2",
+      "Cashfree",
+      "Google Calendar",
+      "Zoom",
+      "Model Context Protocol",
+      "AI Integration",
+    ],
+    challenge:
+      "Building a secure, multi-tenant platform that combines project delivery, employee operations, client collaboration, finance, scheduling, file storage, and AI tools without exposing data between companies or forcing teams to manage disconnected applications.",
+    solution:
+      "Built a full-stack SaaS platform with tenant-isolated workspaces, role-based access, project and task management, real-time chat, attendance and payroll, CRM, invoices, expenses, client portals, booking pages, Google Calendar and Zoom integration, recurring Cashfree subscriptions, storage quotas, and an MCP-powered AI assistant. Added company-level branding, onboarding, OAuth integrations, secure file storage, and operational subscription lifecycle management.",
+    impact:
+      "Delivered a unified operating system for growing teams, allowing companies to manage employees, projects, clients, meetings, documents, billing, and daily workflows from one secure workspace—while reducing tool fragmentation and making business data directly accessible through AI.",
+    link: "https://hashboard.in/",
+  },
+  {
+  id: 10,
+  title: "HashCal",
+  description:
+    "HashCal is a scheduling and booking platform that lets professionals share personalized booking pages, define availability rules, and let clients self-book meetings that sync automatically with Google Calendar and Zoom — eliminating manual back-and-forth scheduling.",
+  image: "/work/work10.png",
+  category: "Scheduling & Booking Automation Platform",
+  clientName: "TripleHash",
+  profession: "SaaS & Productivity Tools",
+  technologies: [
+    "Node.js",
+    "Express",
+    "PostgreSQL",
+    "Prisma",
+    "Firebase",
+    "Google Calendar API",
+    "Zoom API",
+    "OAuth 2.0",
+  ],
+  challenge:
+    "Building a reliable public booking experience that respects each host's real-time availability, timezone, and calendar conflicts, while keeping bookings, questions, and webhooks correctly isolated per user and in sync with external calendar and video-conferencing providers.",
+  solution:
+    "Built a backend with configurable booking pages, custom availability rules and screening questions, an availability engine that resolves open slots against connected calendars, and public booking endpoints for client-side scheduling. Integrated Google Calendar and Zoom via OAuth for automatic event creation and meeting links, standardized all scheduling logic on UTC, and added webhook support for booking lifecycle events.",
+  impact:
+    "Delivered a self-serve scheduling system that removes manual coordination from booking meetings, keeps calendars automatically in sync across providers, and gives hosts a branded, question-driven booking flow for their clients.",
+  link: "https://cal.hashboard.in/",
+},
+{
+  id: 11,
+  title: "HashPlay",
+  description:
+    "HashPlay is a YouTube embed builder that lets users turn any YouTube link into a clean, autoplay-muted video player with a tap-to-unmute prompt, custom aspect ratios, and ready-to-paste embed code for JSX, HTML, or WordPress — all saved to a personal, searchable library.",
+  image: "/work/work11.png",
+  category: "Video Embed & Player Builder",
+  clientName: "TripleHash",
+  profession: "SaaS & Developer Tools",
+  technologies: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Vidstack Player",
+    "Firebase",
+    "Firebase Auth",
+    "Firestore",
+  ],
+  challenge:
+    "Standard YouTube embeds offer little control over playback behavior, aspect ratio, or branding, and autoplay policies make silent-to-sound video experiences hard to get right across browsers and devices — especially on mobile, where the player's own controls can't be reached inside the iframe.",
+  solution:
+    "Built a custom video player on Vidstack that autoplays muted with a tap-to-unmute overlay, supports five aspect ratios (16:9, 9:16, 1:1, 4:5, 4:3), and exposes a mobile-friendly play control routed around YouTube's iframe restrictions. Wrapped it in an embed builder that parses any YouTube URL or ID, previews the player live, and generates copy-ready embed code in JSX, HTML, or WordPress-safe markup, with Firebase authentication and Firestore-backed saved libraries per user.",
+  impact:
+    "Gave users a fast, no-code way to produce polished, autoplay-safe YouTube embeds with consistent behavior across formats and platforms, plus a personal library to revisit, rename, and re-export past embeds on demand.",
+  link: "https://hashplay.hashboard.in/",
+},
 ];

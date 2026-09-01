@@ -27,7 +27,7 @@ const Team = () => {
     },
     {
       name: "Kunal Kumar",
-      title: " CTO & Developer",
+      title: " CTO & AI Engineer",
       handle: "kunal",
       contactText: "Contact Me",
       avatarUrl: "/team/kunal.png",
@@ -40,7 +40,7 @@ const Team = () => {
       title: "Senior WordPress Developer",
       handle: "dhiraj",
       contactText: "Connect Me",
-      avatarUrl: "/team/dheeraj-sir.png",
+      avatarUrl: "/team/dj.png",
       miniAvatarUrl: "/team/dheeraj-sir.png",
       onContactClick: "https://www.linkedin.com/in/dhiraj-giri-717a3532b/",
     },
@@ -55,7 +55,7 @@ const Team = () => {
     },
     {
       name: "Gautam Kr. Pandit",
-      title: "Full Stack Developer",
+      title: "Software Engineer",
       handle: "gautam",
       contactText: "Connect Me",
       avatarUrl: "/team/gautam.png",
@@ -69,6 +69,15 @@ const Team = () => {
       contactText: "Contact Me",
       avatarUrl: "/team/sagar1.png",
       miniAvatarUrl: "/team/sagar-icon.jpg",
+      onContactClick: "https://www.linkedin.com/in/sagar-kumar-ab452b276/",
+    },
+    {
+      name: "Tezashwani",
+      title: "Social Media Manager",
+      handle: "Tezash",
+      contactText: "Contact Me",
+      avatarUrl: "/team/diksha.png",
+      miniAvatarUrl: "/team/diksha.png",
       onContactClick: "https://www.linkedin.com/in/sagar-kumar-ab452b276/",
     },
 

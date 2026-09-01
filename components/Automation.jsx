@@ -33,7 +33,7 @@ const CustomersSectionSimple = () => {
                             />
                         </div>
 
-                        {/* "n8n embed" Badge */}
+                        {/* "n8n embed" Badge*/}
                         <div className="inline-flex items-center gap-0.5 pr-3 pt-0.5 mb-6 mt-[20] sm:mt-[10] md:mt-[-70]  rounded-full border border-[#ffffff1a] text-white text-[0.8rem]  
                                 backdrop-filter backdrop-blur-md"
                             style={{
@@ -43,7 +43,7 @@ const CustomersSectionSimple = () => {
                         >
 
                             <img src="/case.png" alt="" />
-                            <span>n8n embed</span>
+                            <span>AI Power</span>
                         </div>
 
                         {/* Main Heading */}
@@ -57,7 +57,7 @@ const CustomersSectionSimple = () => {
                         </p>
 
                         {/* Call-to-Action Button */}
-                        <button onClick={() => window.open('https://calendly.com/triple-hash/lets-turn-your-idea-to-code', '_blank')} className="cursor-pointer bg-gradient-to-r from-[#077AC7] to-[#6B21EF]  text-white buttonfont px-6 py-3 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
+                        <button onClick={() => window.open('https://hashboard.in/book/web', '_blank')} className="cursor-pointer bg-gradient-to-r from-[#077AC7] to-[#6B21EF]  text-white buttonfont px-6 py-3 rounded-lg shadow-lg hover:opacity-90 transition-opacity duration-300">
                             Book Your Call Now
                         </button>
                     </div>
@@ -77,7 +77,7 @@ const CustomersSectionSimple = () => {
                            <span className='bg-[#1F192A] p-1'><strong className="bg-gradient-to-l from-[#e768e6] to-[#ff9b26] bg-clip-text text-transparent "> TripleHash builds </strong></span>  custom workflows and automations that adapt to your business, not the other way around.
                         </p>
 
-                        <button onClick={() => window.open('https://calendly.com/triple-hash/lets-turn-your-idea-to-code', '_blank')} className="cursor-pointer bg-gradient-to-r from-[#FF8C00] to-[#FF4500] text-white buttonfont px-5 py-3 border border-[#FFFFFF63] rounded-lg hover:opacity-90 transition-opacity">
+                        <button onClick={() => window.open('https://hashboard.in/book/web', '_blank')} className="cursor-pointer bg-gradient-to-r from-[#FF8C00] to-[#FF4500] text-white buttonfont px-5 py-3 border border-[#FFFFFF63] rounded-lg hover:opacity-90 transition-opacity">
                             Build With TripleHash
                         </button>
                     </div>

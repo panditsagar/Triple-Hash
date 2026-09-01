@@ -72,14 +72,14 @@ const Navbar = () => {
                         <Link href="/contact" className={styles.signInLink}>
                             Get In Touch
                         </Link>
-                        <Link href="https://calendly.com/triple-hash/lets-turn-your-idea-to-code?month=2025-09" className={styles.getStartedButton}>
+                        <Link href="https://hashboard.in/book/web" className={styles.getStartedButton}>
                             Book A Call
                         </Link>
                     </div>
 
                     {/* Mobile Menu Button (Hamburger/Close) */}
                     <div className={styles.mobileMenuButtonContainer}>
-                        <Link href="https://calendly.com/triple-hash/lets-turn-your-idea-to-code?month=2025-09" className={styles.callButton} onClick={closeMobileMenu}>
+                        <Link href="https://hashboard.in/book/web" className={styles.callButton} onClick={closeMobileMenu}>
                             Book A Call
                         </Link>
                         <button

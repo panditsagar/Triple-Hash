@@ -10,7 +10,7 @@ const CtaSection = () => (
     <button
       onClick={() =>
         window.open(
-          "https://calendly.com/triple-hash/lets-turn-your-idea-to-code",
+          "https://hashboard.in/book/web",
           "_blank"
         )
       }
